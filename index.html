@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" style="mix-blend-mode: multiply;" href="./images/icon.png" type="image/x-icon">
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                        const mobileMeaBox = document.querySelector('.mobile-mea-box');
+            let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            function checkVisibility() {
+                const rect = mobileMeaBox.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const isScrollingUp = currentScrollTop < lastScrollTop;
+
+                if (rect.top <= windowHeight && rect.bottom >= 0) {
+                    mobileMeaBox.classList.add('show');
+                    mobileMeaBox.classList.remove('hide');
+                } else if (isScrollingUp) {
+                    mobileMeaBox.classList.add('hide');
+                    mobileMeaBox.classList.remove('show');
+                } else {
+                    mobileMeaBox.classList.remove('show');
+                    mobileMeaBox.classList.remove('hide');
+                }
+
+                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+            }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();
+
+            window.addEventListener('scroll', checkVisibility);
+            checkVisibility();
+                
+                let currentPage = document.querySelector(".first-image");
+
+    
+                let book = document.querySelector(".book");
+                book.addEventListener("mouseenter", function() {
+                    currentPage.style.backgroundImage = "url('./images/new0.jpg')";
+                });
+    
+                book.addEventListener("mouseleave", function() {
+                    currentPage.style.backgroundImage = "url('./images/new-1.jpg')";
+                });
+    
+                let online = document.querySelector(".online");
+                online.addEventListener("mouseenter", function() {
+                    currentPage.style.backgroundImage = "url('./images/new2.jpg')";
+                });
+    
+                online.addEventListener("mouseleave", function() {
+                    currentPage.style.backgroundImage = "url('./images/new-1.jpg')";
+                });
+    
+                let manage = document.querySelector(".manage");
+                manage.addEventListener("mouseenter", function() {
+                    currentPage.style.backgroundImage = "url('./images/new4.jpg')";
+                });
+    
+                manage.addEventListener("mouseleave", function() {
+                    currentPage.style.backgroundImage = "url('./images/new-1.jpg')";
+                });
+    
+                let flight = document.querySelector(".flight");
+                flight.addEventListener("mouseenter", function() {
+                    currentPage.style.backgroundImage = "url('./images/new3.jpg')";
+                });
+    
+                flight.addEventListener("mouseleave", function() {
+                    currentPage.style.backgroundImage = "url('./images/new-1.jpg')";
+                });
+
+
+                let currentPage2 = document.querySelector(".image-container");
+                let ball = document.querySelector(".board-ball")
+                let name = document.querySelector(".country-name")
+                let price = document.querySelector(".travel-price");
+    
+                document.querySelector(".beirut-erbil").addEventListener("click", function() {
+                    currentPage2.style.backgroundImage = "url('./images/first.jpg')";
+                    ball.style.top = "120px";
+                    name.classList.add("fade-out");
+                    price.classList.add("fade-out");
+                    setTimeout( () => {
+                        name.innerHTML = "Beirut-Erbit";
+                        price.innerHTML = "250 *";
+                        name.classList.remove("fade-out");
+                        price.classList.remove("fade-out");;
+                        price.classList.remove("fade-out");
+                    }, 50);
+                });
+
+                document.querySelector(".erbil-beirut").addEventListener("click", function() {
+                    currentPage2.style.backgroundImage = "url('./images/erbil-beirut.jpg')";
+                    ball.style.top = "190px";
+                    name.classList.add("fade-out");
+                    price.classList.add("fade-out");
+                    setTimeout( () => {
+                        name.innerHTML = "Erbil-Beirut";
+                        price.innerHTML = "240 *";
+                        name.classList.remove("fade-out");
+                        price.classList.remove("fade-out");
+                    }, 50);
+                });
+
+
+                document.querySelector(".beirut-cario").addEventListener("click", function() {
+                    currentPage2.style.backgroundImage = "url('./images/beirut-cario.jpg')";
+                    ball.style.top = "270px";
+                    name.classList.add("fade-out");
+                    price.classList.add("fade-out");
+                    setTimeout( () => {
+                        name.innerHTML = "Beirut-Cario";
+                        price.innerHTML = "257 *";
+                        name.classList.remove("fade-out");
+                        price.classList.remove("fade-out");
+                    }, 50);
+                });
+
+                 document.querySelector(".beirut-amman").addEventListener("click", function() {
+                    currentPage2.style.backgroundImage = "url('./images/beirut-amman.jpg')";
+                    ball.style.top = "345px";
+                    name.classList.add("fade-out");
+                    price.classList.add("fade-out");
+                    setTimeout( () => {
+                        name.innerHTML = "Beirut-Amman";
+                        price.innerHTML = "236 *";
+                        name.classList.remove("fade-out");
+                        price.classList.remove("fade-out");
+                    }, 50);
+                });
+
+                document.querySelector(".amman-beirut").addEventListener("click", function() {
+                    currentPage2.style.backgroundImage = "url('./images/amman-beirut.jpg')";
+                    ball.style.top = "420px";
+                    name.classList.add("fade-out");
+                    price.classList.add("fade-out");
+                    setTimeout( () => {
+                        name.innerHTML = "Amman-Beirut";
+                        price.innerHTML = "327 *";
+                        name.classList.remove("fade-out");
+                        price.classList.remove("fade-out");
+                    }, 50);
+                });
+
+                document.querySelector(".beirut-instanbool").addEventListener("click", function() {
+                    currentPage2.style.backgroundImage = "url('./images/beirut-instanbool.jpg')";
+                    ball.style.top = "500px";
+                    name.classList.add("fade-out");
+                    price.classList.add("fade-out");
+                    setTimeout( () => {
+                        name.innerHTML = "Beirut-Instanbool";
+                        price.innerHTML = "264 *";
+                        name.classList.remove("fade-out");
+                        price.classList.remove("fade-out");
+                    }, 50);
+                });
+
+                document.querySelector(".beiru-doha").addEventListener("click", function() {
+                    currentPage2.style.backgroundImage = "url('./images/beiru-doha.jpg')";
+                    ball.style.top = "575px";
+                    name.classList.add("fade-out");
+                    price.classList.add("fade-out");
+                    setTimeout( () => {
+                        name.innerHTML = "Beirut-Doha";
+                        price.innerHTML = "299 *";
+                        name.classList.remove("fade-out");
+                        price.classList.remove("fade-out");
+                    }, 50);
+                });
+                /*document.addEventListener("scroll", function() {
+                    const fourthPage = document.querySelector(".fourth-page");
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    const documentHeight = document.documentElement.scrollHeight;
+                    const windowHeight = window.innerHeight;
+                    const halfDocumentHeight = documentHeight / 2;
+                
+                    if (scrollTop >= halfDocumentHeight && scrollTop + windowHeight < documentHeight) {
+                        fourthPage.style.top = "0";
+                    } else {
+                        fourthPage.style.top = "100%";
+                    }
+                });*/
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="first-image">
+            <div class="inside-first-image">
+                <header>
+                    <span class="logo">
+                        <div class="logo-img"></div>
+                        <img src="./images/fulllogo.jpg" width="500px" alt="MEA">
+                    </span>
+                    <ul class="list">
+                        <li>Plan & Book</li>
+                        <li>Traveler Info</li>
+                        <li>Cider Miles</li>
+                        <li>About Us</li>
+                    </ul>
+                    <ul class="register">
+                        <a href="https://www.mea.com.lb/english/cedar-miles/login">
+                        <li class="login"><img src="./images/user.png" alt="User" class="user">Login or Register</li>
+                    </a>
+                        <li class="country">🌎 En-Lebanon</li>
+                    </ul>
+                </header>
+                <div class="title-header">
+                <h3 style="font-size: 28px;">Good Morning,</h3>
+                <h1 style="font-size: 35px;">How Can I Help You?</h1>
+            </div>
+                <div class="first-image-options">
+                    <ul class="middle">
+                        <a href="https://www.mea.com.lb/english/cedar-miles/login?red=/english/my-cedar-miles/buy-your-reward-on-mea">
+                            <li class="book">
+                                <b>Book a Trip</b>
+                                <span>Search Flights & Book</span>
+                            </li>
+                        </a>
+                        <a href="https://digital.mea.com.lb/check-in/identification">
+                            <li class="online">
+                                <b>Online Ceck-in</b>
+                                <span>Check in before departure</span>
+                            </li>
+                        </a>
+                        <a href="https://www.mea.com.lb/english/plan-and-book/flight-schedule">
+                            <li class="manage">
+                                <b>Manage Booking</b>
+                                <span>View or Modify your Booking</span>
+                            </li>
+                        </a>
+                        <a href="https://www.mea.com.lb/english/plan-and-book/flight-schedule">
+                            <li class="flight">
+                                <b>Flight Schedule</b>
+                                <span>Check current flights schedule</span>
+                            </li>
+                        </a>
+                    </ul>
+                    
+                    <div class="more-info">
+                        <ul>
+                            <li>
+                                <a href="https://www.mea.com.lb/english/support/contact-us">
+                                    <span class="icon-wrapper">
+                                        <img src="./images/call2.jpg" width="60px" class="icon" alt="call">
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.mea.com.lb/english/support/sales-offices/mea-sales-lebanon">
+                                    <span class="icon-wrapper">
+                                        <img src="./images/location.jpg" class="icon" width="60px" alt="location">
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <div class="second-page">
+            <h1>
+                Our Lastest Flight Deals
+            </h1>
+            <div class="box-image-changer">
+                <span class="image-container"></span>
+                <span class="board" id="board-ball">
+                    <div class="board-ball"></div>
+                    <ul class="list-board">
+                        <li class="beirut-erbil">Beirut-Erbil</li>
+                        <li class="erbil-beirut">Erbil-Beirut</li>
+                        <li class="beirut-cario">Beirut-Cario</li>
+                        <li class="beirut-amman">Beirut-Amman</li>
+                        <li class="amman-beirut">Amman-Beirut</li>
+                        <li class="beirut-instanbool">Beirut-Istsnbool</li>
+                        <li class="beiru-doha">Beirut-Doha</li>
+                    </ul>
+                </span>
+                <div class="info-box">
+                    <span class="time-reamins"><i>Fare expires In: </i><b>37 days</b></span>
+                    <span class="travel-duration"><em>Travel between:</em> <b>19 Jul 2024</b> to <b>31 Aug 2024</b></span>
+                    <h1 class="country-name">Beirut-Erbil</h1>
+                    <span class="round-trip">
+                        <!-- <span class="image-travel"></span> -->
+                        <!-- <img src="./images/travel-icon.png" width="40px" alt="image/x-icon"> -->
+                        <b>Travel Trip</b>
+                    </span>
+                    <span class="box-price">From <h2><em>USD</h2></em> <i><h1 class="travel-price">250 *</h1></i> </span>
+                    <div class="box-bottom">
+                        <a href="https://www.mea.com.lb/plan-and-book/special-offers/berut-to-erbil">
+                            <button>Book</button>
+                        </a>
+                        <span><a href="">Terms & conditions</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="view-div">
+                <a href="https://www.mea.com.lb/english/plan-and-book/special-offers">
+                    <button class="view-all-button">View All</button>
+                </a>
+            </div>
+        </div>
+        <div class="third-page">
+            <div class="complement-board">
+                <h1 class="complement-text">Complement Your Journey</h1>
+                <div class="services">
+                    <ul>
+                        <a href="https://cars.cartrawler.com/mea/en">
+                            <li class="car"><span>Rent A Car</span></li>
+                        </a>
+                        <li class="vip"><span>VIP Salon Service</span></li>
+                        <a href="https://www.cedarexecutive.com/">
+                            <li class="excutive"><span>Cedar Excutive</span></li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="complete-fourth">
+            <span class="cedar-miles"></span>
+            <div class="text-cedar">
+                <h2 class="cedar-text">Every time you fly with MEA or its partners you collect Miles on your
+                    Cedar Miles account, which you can redeem for free tickets on MEA
+                    or any other airline <span class="red"><em>partner</em></span>.</h2>
+                    <div class="discover-cedar-miles">
+                        <a href="https://www.mea.com.lb/english/cedar-miles/benefits/skypriority-old">
+                            <div class="package package1">
+                                <div class="circle"><span class="sky-prority"></span></div>
+                                <h3>SkyPriorty</h3>
+                            </div>
+                        </a>
+                        <a href="https://www.mea.com.lb/english/cedar-miles/benefits/skyteam-benefits">
+                            <div class="package package2">
+                                <div class="circle"><span class="sky-team"></span></div>
+                                <h3 style="position: relative;right: 33px;">SkyTeam Benifits</h3>
+                            </div>
+                        </a>
+                        <a href="https://www.mea.com.lb/english/cedar-miles/benefits/top-tier-privileges">
+                            <div class="package package3">
+                                <div class="circle circle3"><span class="top-tier"></span></div>
+                                <h3 class="right" style="position: relative;right: 80px">Top Tier Privilges</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="https://www.mea.com.lb/english/cedar-miles/about-cedar-miles">
+                        <button class="cedar-button">Discover Cedar Miles</button>
+                    </a>
+            </div>
+        </div>
+
+        <div class="fourth-page"></div>
+            <div class="white-background">
+                <div class="white-text">
+                    <h2 style="font-weight: 500;">Joining Cedar Miles</h2>
+                    <br>
+                    With Cedar Miles, flying with MEA and its 
+                    SkyTeam partners takes you a step ahead 
+                    in your travel experience.
+                </div>
+            </div>
+            <div class="container-map">
+                <div class="geographic"></div>
+                <h3 class="map-text"> Earn Miles</h3>
+            </div>
+            <div class="join-cedar">
+                <div class="join-cedar-image"></div>
+                <div class="join-cedar-miles">Join Cedar Miles</div>
+            </div>
+            <div class="credit-board ">
+                <div class=" credit-image"></div>
+                <div class=" map-text">Spend Miles</div>
+            </div>
+
+        <div class="mobile-box">
+            <div class="mobile-image"></div>
+            <div class="mobile-text">
+                <h2>Get our Mobile App</h2>
+                <div>Introducing the travel app that understands
+                    who you are and where you're going!</div>
+                <a href="https://www.mea.com.lb/english/mobile-app">
+                    <span>Read More</span>
+                </a>
+            </div>
+            <div class="mobile-mea-box">
+                <div class="mobile-mea"></div>
+            </div>
+        </div>
+        <div class="blue-board">
+            <h1>The Latest</h1>
+            <div class="blue-flex">
+                    <div class="blue-box">
+                        <a href="https://www.mea.com.lb/english/about-mea/news-and-press-releases/news-and-press-releases/election-of-mea-cdg-as-a-member-of-the-board-of-governors-amp-chair-of-the-audit-committee-of-iata">
+                            <div class="blue-text">
+                                Election of MEA CDG as a member of the Board of Governors & Chair of the Audit Committe of IATA
+                            </div>
+                            <div class="blue-date"><b>03 Jun 2024</b></div>
+                            <div class="readmore-blue">READ MORE</div>
+                         </a>
+                    </div> 
+                    <div class="blue-box">
+                        <a href="https://www.mea.com.lb/english/about-mea/news-and-press-releases/news-and-press-releases/mea-flight-me211/212-for-25th-of-april-2024-has-been-reinstated">
+                            <div class="blue-text">
+                                MEA flight ME211/212 for 25th of April 2024 has been reinstated
+                            </div>
+                            <div class="blue-date"><b>24 Apr 2024</b></div>
+                            <div class="readmore-blue2">READ MORE</div>
+                        </a>
+                    </div>
+                    <div class="blue-box">
+                        <a href="https://www.mea.com.lb/english/about-mea/news-and-press-releases/news-and-press-releases/light-me211/212-beirut---paris---beirut-for-thursday-25th-of-april-2024">
+                            <div class="blue-text">
+                                Canceltaion of Flight ME211/212 for 25 April 2024
+                            </div>
+                            <div class="blue-date"><b>24 Apr 2024</b></div>
+                            <div class="readmore-blue3">READ MORE</div>
+                        </a>
+                    </div>
+            </div>
+            <a href="https://www.mea.com.lb/english/about-mea/news-and-press-releases/news-and-press-releases">
+                <button class="blue-button">VIEW ALL NEWS</button>
+            </a>
+        </div>
+        <div class="traveler-header">
+            <h1>Traveler Info</h1>
+        </div>
+        <div class="arrow"></div>
+        <div class="arrow2 flipped-horzintal"></div>
+        <div class="traveler-box">
+            <div class="traveler-info1">
+                <div class="traveler-image-box">
+                    <div class="traveler-image1"></div>
+                </div>
+                <div class="traveler-text">
+                    <h2>Check In Information</h2>
+                    <div class="traveler-type">
+                        Check-in counters will normally opne three hours prior to scheduled departure time and closes 45 minutes to 1 hour prior to scheduled departure time.
+                    </div>
+                </div>
+            </div>
+            <div class="traveler-info2">
+                <div class="traveler-image-box">
+                    <div class="traveler-image2"></div>
+                </div>
+                <div class="traveler-text">
+                    <h2>Passenger Services</h2>
+                    <div class="traveler-type"> 
+                        Special Lounges are available at most airports served by MEA and are offered to our Cedar Class passengers as well as MEA Presidents club and Cedar Mlies Members.
+                    </div>
+                </div>
+            </div>
+            <div class="traveler-info3">
+                <div class="traveler-image-box">
+                    <div class="traveler-image3"></div>
+                </div>
+                <div class="traveler-text">
+                    <h2>SkyTeam Rebooking</h2>
+                </div>
+            </div>
+            <div class="traveler-info4">
+                <div class="traveler-image-box">
+                    <div class="traveler-image4"></div>
+                </div>
+                <div class="traveler-text">
+                    <h2>Baggage Info</h2>
+                    <div class="traveler-type"> 
+                        Discover more about lost and Found Baggage, Excess Baggage Chargers AF Codd share policy, Restricted Items and amny more.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="green-board">
+            <div class="green"></div>
+            <div class="green-header-container">
+                <h1 class="green-header">About Us</h1>
+            </div>
+        <div class="green-flex">
+            <div class="green-info">
+                <h2 style="font-size: 37px;">History and Network</h2>
+                <div class="green-second-text">In 1945, Middle East Airlines was established and launched its first service from Beirut to the neighboring cities of Syria, Cyprus, Egypt then Saudi Arabia, Kuwait and other destinations in the Gulf.</div>
+                <a href="https://www.mea.com.lb/english/about-mea/history-and-network">
+                    <div style="top: 25px;" class="readmore-green">READ MORE</div>
+                </a>
+            </div>
+            <div class="green-info">
+                <h2>Our Fleet</h2>
+                <div class="green-second-text">MEA has one of the most modern fleets in the world. Our all-new fleet gives you the world´s most sophisticated cabin and represents the ultimate operational efficiency, extended cabin space and increased flying range.</div>
+                <a href="https://www.mea.com.lb/english/about-mea/our-fleet">
+                    <div class="readmore-green">READ MORE</div>
+                </a>
+            </div>
+            <div class="green-info">
+                <h2>SkyTeam</h2>
+                <div class="green-third-text">SkyTeam, the global airline alliance partnering 19 members, gives frequent business travelers more flexibility and more choices for international travel. SkyTeam offers the following advantages to more than 437+ million travelers, every year.</div>
+                <a href="https://www.mea.com.lb/english/about-mea/skyteam">
+                    <div class="readmore-green">READ MORE</div>
+                </a>
+            </div>
+        </div>
+        <a href="https://www.mea.com.lb/english/about-mea">
+            <button class="green-button">DICOVER MORE</button>
+        </a>
+        </div>
+        <div class="black-board">
+            <div class="black-info">
+                <div class="black-title">Plan & Book</div>
+                <ul class="black-list">
+                    <a href="https://www.mea.com.lb/english/plan-and-book/book-a-trip">
+                        <li>Book A Trip</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/plan-and-book/flight-schedule">
+                        <li>Flight Schedule</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/plan-and-book/manage-booking">
+                        <li>Manage Booking</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/plan-and-book/online-check-in">
+                        <li>Online Check-in</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/plan-and-book/special-offers">
+                        <li>Special Offers</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/plan-and-book/flight-status">
+                        <li>Flight Status</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/plan-and-book/cargo">
+                        <li>Cargo</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/plan-and-book/how-to-book-online">
+                        <li>How to Book Online</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/mobile-app">
+                        <li>The MEA App</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/plan-and-book/book-a-trip?t=conference">
+                        <li>Conference Travel Request</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/plan-and-book/legal-notices/terms-and-conditions">
+                        <li>Legal Notices</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/plan-and-book/manage-booking/cancellation-and-refund">
+                        <li>Cancelation and Refund</li>
+                    </a>
+                    <!-- <a href="https://www.mea.com.lb/english/plan-and-book/rail-and-fly">
+                        <li>Rail & Fly</li>
+                    </a> -->
+                </ul>
+            </div>
+            <div class="black-info">
+                <div class="black-title">Traveler Info</div>
+                <ul class="black-list">
+                    <a href="https://www.mea.com.lb/english/traveler-info/check-in-information">
+                        <li>Cechk In Information</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/traveler-info/passenger-services">
+                        <li>Passebger Services</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/traveler-info/skyteam-rebooking">
+                        <li>SkyTeam Rebooking</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/traveler-info/baggage-info/baggage-calculator">
+                        <li>Baggage Info</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/traveler-info/rafic-hariri-intl-airport">
+                        <li>Rafic Hariri International Airport pf Beirut</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/traveler-info/on-board-experience">
+                        <li>Onboard experience</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="black-info">
+                <div class="black-title">Cedar Miles</div>
+                <ul class="black-list">
+                    <a href="https://www.mea.com.lb/english/cedar-miles/login">
+                        <li >My Account</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/cedar-miles/join-cedar-miles">
+                        <li >Join Cedar Miles</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/cedar-miles/benefits/top-tier-privileges">
+                        <li >Benefits</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/cedar-miles/earn-miles/with-mea">
+                        <li >Earn Miles</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/cedar-miles/spend-miles">
+                        <li >Spend Miles</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/cedar-miles/about-cedar-miles">
+                        <li >About Cedar Miles</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/cedar-miles/news-and-promotions">
+                        <li >News and Promotions</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/cedar-miles/contact-cedar-miles">
+                        <li >Contact Cedar Miles</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/cedar-miles/terms-and-conditions">
+                        <li >Terms and Conditions</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/cedar-miles/faq">
+                        <li >FAQ</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="black-info">
+                <div class="black-title">About Us</div>
+                <ul class="black-list">
+                    <a href="https://www.mea.com.lb/english/about-mea/history-and-network">
+                        <li >History and Netwrok</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/about-mea/our-fleet">
+                        <li >Our Fleet</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/about-mea/affiliated-companies">
+                        <li >Affiliated Companies</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/about-mea/the-training-center">
+                        <li >Our Training & Conference Center</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/about-mea/skyteam">
+                        <li >SkyTeam</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/about-mea/financial-statements">
+                        <li >Financial Statements</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/about-mea/news-and-press-releases/news-and-press-releases">
+                        <li >Media Center</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/about-mea/codeshare-flight">
+                        <li >Codeshare Flight</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/about-mea/sustainability">
+                        <li >Substainability</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="black-info">
+                <div class="black-title2">Contact-Us</div>
+                <ul class="black-list">
+                    <a href="https://www.mea.com.lb/english/support/faq">
+                        <li >FAQ</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/support/contact-us">
+                        <li >Contact Us</li>
+                    </a>
+                    <a href="https://www.mea.com.lb/english/support/offices">
+                        <li >MEA Offices</li>
+                    </a>
+                    <a href="https://careers.mea.com.lb/careers/home?_ga=2.188577320.1652789119.1721762542-380498584.1721762541" target="_blank">
+                        <div class="black-title">Careers</div>
+                    </a>
+                </ul>
+            </div>
+            <div class="black-info">
+                <div class="black-title">MEATravel</div>
+                <ul class="black-list">
+                    <a href="">
+                        <li>Travel Guidelines</li>
+                    </a>
+                    <a href="">
+                        <li>Travel Forms</li>
+                    </a>
+                    <a href="">
+                        <li>Annoucements For COvid-19</li>
+                     </a>
+                </ul>
+            </div>
+            <div class="black-info">
+                <a target="_blank" href="https://profile.globalsign.com/SiteSeal/siteSeal/profile/profile.do?p1=ac5fb9a2&p2=c76cd723eccc1539e38596e643d61ccc1a3cf232903dcb74b3990b64b199f4e342d41cd3193fac2cd90ad527eec00966a6d9cb&p3=eaca814eabf826ca49e8696605f62a6dbebad2f6">
+                    <div class="black-image-box">
+                        <div class="black-image"></div>
+                    </div>
+                </a>
+                <div class="last-text">
+                    © 2024 Middle East Airlines
+                </div> 
+            </div>
+        </div>
+        <script src="./script.js" async defer></script>
+    </body>
+</html>
