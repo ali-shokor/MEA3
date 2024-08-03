@@ -334,6 +334,7 @@ ul.register li:hover {
 }
 
 .board {
+    cursor: pointer;
     position: absolute;
     z-index: 1; /* Ensure the board content is above the background image */
     height: 100%;
