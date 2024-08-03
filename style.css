@@ -5,6 +5,10 @@
     background-position: center;
 }
 
+html {
+    font-size: 16px;
+}
+
 header {
     padding: 1.875rem; /* 30px */
 }
@@ -57,18 +61,25 @@ ul {
     height: 100%;
 }
 
+.box-centering {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 3%;
+}
+
 .title-header {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 0.9375rem; /* 15px */
     height: 8.125rem; /* 130px */
     padding: 1.25rem; /* 20px */
-    display: inline-block;
+    display: inline-flex;
     box-shadow: 0px 0.25rem 0.9375rem rgba(137, 38, 38, 0.3); /* 0px 4px 15px */
     backdrop-filter: blur(0.3125rem); /* 5px */
     animation: fadeIn 1s ease-in-out;
-    position: relative;
-    bottom: 1.875rem; /* 30px */
-    left: 35.625rem; /* 570px */
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
 
 .title-header h1 {
@@ -1283,7 +1294,9 @@ a {
     position: relative;
     display: flex;
     gap: 6.25rem; /* 100px */
-    left: 4.375rem; /* 70px */
+    padding: 3rem;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 
@@ -1463,4 +1476,147 @@ a {
     position: relative;
     top: 30rem; /* 480px */
     right: 47.5rem; /* 760px */
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 15px; /* Slightly smaller font for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 14px; /* Smaller font for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 13px; /* Smaller font for mobile devices */
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 12px; /* Even smaller font for smaller mobile devices */
+    }
+}
+
+/* For large screens */
+@media (min-width: 1200px) {
+    .black-title, .black-title2, .black-title3 {
+        font-size: 1.5rem;
+    }
+
+    .black-list li {
+        left: 5rem;
+        font-size: 1.0625rem;
+    }
+
+    .black-image-box {
+        height: 9.375rem;
+        width: 12.5rem;
+        top: 12.5rem;
+        right: 11.25rem;
+    }
+
+    .last-text {
+        top: 30rem;
+        right: 47.5rem;
+    }
+}
+
+/* For medium screens (tablets, smaller laptops) */
+@media (max-width: 992px) {
+    .black-title, .black-title2, .black-title3 {
+        font-size: 1.25rem;
+    }
+
+    .black-list li {
+        left: 4rem;
+        font-size: 1rem;
+    }
+
+    .black-image-box {
+        height: 8.75rem;
+        width: 11.5rem;
+        top: 10rem;
+        right: 9rem;
+    }
+
+    .last-text {
+        top: 25rem;
+        right: 40rem;
+    }
+}
+
+/* For small screens (mobile devices) */
+@media (max-width: 768px) {
+    .black-title, .black-title2, .black-title3 {
+        font-size: 1rem;
+    }
+
+    .black-list li {
+        left: 2rem;
+        font-size: 0.875rem;
+    }
+
+    .black-image-box {
+        height: 7.5rem;
+        width: 10rem;
+        top: 8rem;
+        right: 5rem;
+    }
+
+    .last-text {
+        top: 20rem;
+        right: 30rem;
+    }
+}
+
+/* For extra small screens */
+@media (max-width: 576px) {
+    .black-title, .black-title2, .black-title3 {
+        font-size: 0.875rem;
+    }
+
+    .black-list li {
+        left: 1.5rem;
+        font-size: 0.75rem;
+    }
+
+    .black-image-box {
+        height: 6.25rem;
+        width: 8.5rem;
+        top: 5rem;
+        right: 3rem;
+    }
+
+    .last-text {
+        top: 15rem;
+        right: 20rem;
+    }
+}
+
+
+/* Specific adjustments for .traveler-info on smaller screens */
+@media (max-width: 768px) {
+    .traveler-info {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .traveler-image-box {
+        height: auto;
+    }
+}
+
+/* Specific adjustments for .blue-box on smaller screens */
+@media (max-width: 992px) {
+    .blue-box {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
 }
